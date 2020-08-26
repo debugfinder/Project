@@ -4,104 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login Form</title>
-<style> 
+    <style> 
+    
+
+.main {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
 
 .container {
-    height: 450px;
-    width: 300px;
+    height: 500px;
+    width: 350px;
     box-shadow: 0 10px 20px black;
     background-size: cover;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
     font-family: 'Abel', sans-serif;
+    background-image: url("http://i.xp.io/19ilEQjT.jpg");
 }
 
-.image {
-    height: 100px;
-    width: 100px;
-    background-image: url('https://images.wallpaperscraft.com/image/man_silhouette_night_barbed_wire_115312_1280x720.jpg');
-    background-size: cover;
-    border-radius: 50%;
-    border: 8px solid white;
-    position: relative;
-    top: 200px;
-    margin-left: 170px;
-    box-shadow: 0 2px 15px rgb(58, 54, 54);
-    transform: rotate(-20deg);
+.gradient {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(to top, rgba(28, 171, 238, 0.7), rgba(253, 252, 252, 0.21));
+    color: white;
 }
 
-.shape {
-    height: 250px;
-    width: 400px;
-    background-color: black;
-    margin-left: -20px;
-    position: relative;
-    top: -80px;
-    box-shadow: 0 2px 15px black;
-    transform: rotate(25deg);
+.content {
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
-h3 {
-    margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
+h2 {
+    font-size: xx-large;
+    letter-spacing: -1px;
 }
 
-.title {
-    color: rgb(105, 100, 109);
-}
-
-p {
-    padding-left: 30px;
-    padding-right: 30px;
-    color: rgb(105, 100, 109);
+.details {
+    font-style: italic;
+    color: rgb(185, 206, 224);
 }
 
 .icons {
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    top: -30px;
+    position: absolute;
+    left: 85%;
 }
-    .paul{
-    margin-bottom:10px;
-    }
+
 .icons i {
-    margin-left: 10px;
-    font-size: 20px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: rgb(202, 215, 226);
     transition: 0.3s;
-    color: rgb(40, 163, 194);
-    ;
 }
 
 .icons i:hover {
-    transform: scale(1.1);
-    color: rgb(18, 192, 235);
+    color: white;
 }
-</style>
-   </head>
 
+@media screen and(min-width:200px) {
+    .container {
+        height: 350px;
+        width: 200px;
+    }
+    h2 {
+        font-size: x-large;
+    }
+    .icons i {
+        font-size: large;
+        margin-bottom: 10px;
+    }
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login Form</title>
+</head>
 
 <body>
-    <div class="container">
-        <div class="shape">
-            <div class="image"></div>
+    <div class="main">
+        <div class="container">
+            <div class="gradient">
+                <div class="content">
+                    <h2>PRADEEP <br> PAUL</h2>
+                    <p>18 years,Delhi ,India</p>
+                    <br>
+                    <p class="details">I am a digital marketing Manager working in Lisbon. I like to travel across the world</p>
+                    <div class="icons">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3>Muhammad Farhan</h3>
-        <h3 class="title">Web Designer</h3>
-        <p>Web Designer,UI designer,photographer,web developer,etc</p>
-        <div class="icons">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <br><br><br>
-        </div>
-         <div class="paul"></div>
     </div>
-    <div class="paul"></div>
 </body>
 
 </html>
