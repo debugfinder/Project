@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <style>
+    
+
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+.app{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1{
+  margin: 50px 0 30px 0;
+  text-align: center;
+  font-size: 40px;
+}
+.a{
+    margin:10px;
+    text-decoration:none;
+    color:red;
+    border:1px red solid;
+    padding:2px;
+    border-radius:5px;
+}
+      .c{
+    margin:2px;
+    text-decoration:none;
+    color:red;
+    border:1px red solid;
+    padding:2px;
+    border-radius:5px;
+}
+.pads{
+  background: lightblue;
+  position: absolute;
+  bottom:1px;
+  width: 100%;
+  display: flex;
+}
+.pads>div{
+  width:100px;
+  height: 100px;
+  
+  flex:1;
+  
+}
+.pad1 {
+  background: #60d394;
+}
+.pad2 {
+  background: #d36060;
+}
+.pad3 {
+  background: #c060d3;
+}
+.pad4 {
+  background: #d3d160;
+}
+.pad5 {
+  background: #606bd3;
+}
+.pad6 {
+  background: #60c2d3;
+}
+.visual>div{
+  position:absolute;
+  height:30px;
+  width:30px;
+  bottom: 0%;
+  border-radius:50%;
+  transform:scale(1) ;
+  z-index:-1;
+}
+@keyframes jump{
+  0%{
+    bottom:0%;
+    left:20%;
+  }
+  50%{
+    bottom: 50%;
+    left: 50%;
+  }
+  100%{
+bottom:0%;
+    left:80%;
+  }
+}
+
+
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tap Music</title>
+  </head>
+  <body>
+    <section class="app">
+      <header>
+       
+     
+         <h1>Tap Music</h1>
+        <p>Create sounds with just one tap</p>    
+      </header>
+       
+       <a class="a" href="https://1.envato.market/code">Click me</a>
+      
+      <div class="visual"></div>
+      <div class="pads">
+        <div class="pad1">
+          <audio class="sound">
+            <source src="https://sndup.net/8njh/bubbles.mp3">
+          </audio>
+        </div>
+        <div class="pad2">
+          <audio class="sound">
+            <source src="https://sndup.net/7dr6/clay.mp3">
+          </audio>
+        </div>
+        <div class="pad3">
+          <audio class="sound">
+            <source src="https://sndup.net/2x8y/confetti.mp3">
+          </audio>
+        </div>
+        <div class="pad4">
+          <audio class="sound">
+            <source src="https://sndup.net/3z25/glimmer.mp3">
+          </audio>
+        </div>
+        <div class="pad5">
+          <audio class="sound">
+            <source src="https://sndup.net/5ygy/moon.mp3">
+          </audio>
+        </div>
+        <div class="pad6">
+          <audio class="sound">
+            <source src="https://sndup.net/5nqv/ufo.mp3">
+          </audio>
+        </div>
+      </div>
+    </section>
+    <script>
+    window.addEventListener("load",()=>
+{ 
+  
+  const pads=document.querySelectorAll('.pads div');
+  const sounds=document.querySelectorAll('.sound');
+  const visual=document.querySelector('.visual');
+  const colors=[
+"#60d394",
+    "#d36060",
+    "#c060d3",
+    "#d3d160",
+    "#606bd3",
+    "#60c2d3"
+    ];
+  
+  pads.forEach((pad,index)=>{
+    pad.addEventListener('click',()=>{
+      sounds[index]. currentTime=0;
+      sounds[index].play();
+      createBubble(index);
+    });
+  });
+ 
+ 
+ const createBubble=(index)=>
+ {
+   var bubble=document.createElement("div");
+   visual.appendChild(bubble);
+   bubble.style.backgroundColor=colors[index];
+   bubble.style.animation=`jump 1s ease`;
+   bubble.addEventListener("animationend",function(){
+     visual.removeChild(this);
+   });
+   
+   
+ };
+});
+    </script>
+   
+  </body>
+  </html> 
