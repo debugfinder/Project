@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        
+        var endpoint = "https://jsonbox.io/box_46a99c2fcad3a54bf54c";
+
+        function fetchJSON(a) {
+            var f = new XMLHttpRequest;
+            f.open("GET", a, false);
+            f.send(null);
+            return f.responseText
+        }
+        
+        function isURL(a) {
+            let url = a
+            if (!a.startsWith("javascript:")) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var hashh = window.location.hash.substr(1);
+        if (window.location.hash != "") {
+            var res = JSON.parse(fetchJSON(endpoint + "/?q=s:" + hashh))[0];
+            var data = res["l"];
+            console.log(data);
+            if (data != null) {
+                if (isURL(data)) {
+                    window.location.href = data;
+                }
+            }
+        }</script>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>URL 2.0 - Your Own URL Shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your Own URL Shortener which doesn't need a server">
+    <meta name="author" content="Palash Bauri">
+    
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    margin: 2em;
+    margin: auto;
+    text-align: center;
+    background: whitesmoke;
+}
+
+h1,
+.h1 {
+    color: #102E87;
+    font-family: monospace;
+    font-size: 2rem;
+
+}
+
+.h1 a {
+    color: #102E87;
+    text-decoration: none
+}
+
+.h1 a:visited {
+    color: #102E87;
+    text-decoration: none
+}
+
+.bold {
+    font-weight: bold;
+}
+
+p {
+    max-width: 600px;
+}
+
+form,
+.form {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #1337a5;
+    border: 1px solid #d6d6d6;
+    box-shadow: 3px 3px 0px #bababa;
+    display: inline-block;
+    width: 98%;
+    max-width: 380px;
+    border-radius: 16px;
+}
+
+.main {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding: 0px 10px 5px 10px;
+    margin: 8px auto 8px;
+    border: 2px solid #0e2877;
+    box-shadow: 5px 6px 0px #0e2877;
+    width: 95%;
+    max-width: 600px;
+    border-radius: 16px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    ;
+    font-size: 16px;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 16px;
+    display: inline-block;
+    text-align: center;
+    color: #0e2877;
+    background-color: white;
+    padding: 4px 8px;
+    /*border: 0px solid grey;*/
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: cyan;
+    color: black;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    color: #0e2877;
+}
+
+.small-text {
+    font-size: smaller;
+}
+    </style>
+
+
+
+    <link rel="shortcut icon" href="https://1.bp.blogspot.com/-_3RkOZ-m8IY/X1CtEHHIpXI/AAAAAAAAWJY/bEQqJXOC8A8srMVyE9S4kz3sJybk0objQCNcBGAsYHQ/s400/4460321%255B1%255D.png">
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h1 class="h1"><a href="/">URL-Change</a></h1>
+        </header>
+        <div class="form">
+            <input type="url" id="urlinput" placeholder="Put Your Long URL Here">
+            <div>
+                <input type="text" maxlength=20 id="custominput" placeholder="Custom URL">
+                <p id="erbox" style="color:red;"></p>
+            </div>
+            <button id="sbtn" type="button" class="btn btn-dark"> 🔗 Shorten Me</button>
+        </div>
+        <br>
+        <div class="form" style="margin-bottom : 0px !important;">
+            <input type="text" id="shortenedURL" placeholder="Your Short Url Shown here">
+            <p id="sucess" style="color:cyan"></p>
+        </div>
+        <footer class="infos">
+            <p class="small-text" style="color:grey;">Please Don't Shorten Sensitive Information With URL! We are not
+                responsible for any damage made using URL </p>
+            <a class="small-text" href="https://paulcode.lawtantra.org" style="text-decoration: none;"> ⚠️ Report</a>
+            <p><strong> Powered by
+                    <a href="https://paulcode.lawtantra.org" style="text-decoration: none;">UNKNOWN</a></strong>
+            </p>
+        </footer>
+    </div>
+    <script>
+        let pushJSON = (address, longurl, shorturl) => {
+    let request = new XMLHttpRequest();
+    request.open('POST', address);
+    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    let data = {
+        "l": longurl,
+        "s": shorturl
+    };
+    request.send(JSON.stringify(data));
+};
+
+let cinp = () => {
+    document.getElementById("erbox").innerHTML = "";
+    let cival = document.getElementById("custominput").value;
+    
+    let res = JSON.parse(fetchJSON(endpoint + '/?q=s:' + cival))
+    if (res.length === 0){
+        return true;
+    }
+    res = res[0]["l"]
+    let data = res;
+
+
+    if (data != null) {
+        return false;
+
+    } else if (data == null) {
+        return true;
+
+    }
+
+
+};
+
+let geturl = () => {
+    let url = document.getElementById("urlinput").value;
+    return url;
+
+};
+
+let getrandom = () => {
+    let text = "";
+    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (let i = 0; i < 5; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+};
+
+let genhash = () => {
+    if (document.getElementById("custominput").value == "") {
+        window.location.hash = getrandom();
+        check_is_unique();
+    } else {
+        window.location.hash = document.getElementById("custominput").value;
+
+    }
+};
+
+let check_is_unique = () => {
+    let url = window.location.hash.substr(1);
+    let res = JSON.parse(fetchJSON(endpoint + '/?q=s:' + url))[0];
+    let data = res;
+
+    if (data != null) {
+        genhash();
+    }
+
+
+};
+
+let copyer = (containerid) => {
+    let elt = document.getElementById(containerid);
+    if (document.selection) { // IE
+        if (elt.nodeName.toLowerCase() === "input") {
+            document.getElementById(containerid).select();
+            document.execCommand("copy");
+        } else {
+            let range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select();
+            document.execCommand("copy");
+        }
+
+    } else if (window.getSelection) {
+        if (elt.nodeName.toLowerCase() === "input") {
+            document.getElementById(containerid).select();
+            document.execCommand("copy");
+        } else {
+            let range_ = document.createRange();
+            range_.selectNode(document.getElementById(containerid));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range_);
+            document.execCommand("copy");
+        }
+    }
+};
+
+let send_request = (url) => {
+    let longurl = url;
+    let shorturl = window.location.hash.substr(1)
+    let address = endpoint + "/";
+    // console.log(address)
+    pushJSON(address, longurl, shorturl);
+
+    document.getElementById('shortenedURL').value = window.location.href;
+    document.getElementById('sucess').innerHTML = "Short URL Copied to Clipboard!";
+    copyer("shortenedURL");
+};
+
+let shorturl = () => {
+    let longurl = geturl();
+    let re = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
+    let cre = /^([a-zA-Z0-9 _-]+)$/;
+    let protocol_ok = re.test(longurl);
+    if (!protocol_ok) {
+        document.getElementById("erbox").style.color = "red";
+        document.getElementById("erbox").innerHTML = "❌ Invalid URL";
+    } else {
+        document.getElementById("erbox").innerHTML = "";
+        if (document.getElementById("custominput").value == "") {
+            genhash();
+            send_request(longurl);
+
+        } else {
+            if (cre.test(document.getElementById("custominput").value)) {
+                if (cinp()) {
+                    document.getElementById("erbox").style.color = "cyan";
+                    document.getElementById("erbox").innerHTML = " Custom Address Available ✔️";
+                    genhash();
+                    send_request(longurl);
+                } else {
+                    document.getElementById("erbox").style.color = "red";
+                    document.getElementById("erbox").innerHTML = "❌ Custom Address Already Used, Choose Another";
+                    document.getElementById("custominput").placeholder = document.getElementById("custominput").value;
+                    document.getElementById("custominput").value = "";
+                }
+            } else {
+                document.getElementById("erbox").style.color = "red";
+                document.getElementById("erbox").innerHTML = "Invalid Custom URL! Use only Alphanumerics and underscore!";
+                document.getElementById("custominput").placeholder = document.getElementById("custominput").value;
+                document.getElementById("custominput").value = "";
+
+            }
+        }
+
+
+    }
+};
+document.getElementById("sbtn").addEventListener("click", shorturl);
+
+console.log(`
+
+Done, Done, Done...............
+
+`)
+    
+    </script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="efd4a139fb4dffc7e3cb8acd-|49" defer=""></script></body>
+
+</html>
