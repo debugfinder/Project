@@ -189,6 +189,54 @@ footer {
             </p>
         </footer>
     </div>
+
+
+
+    
+     <style>
+         
+        
+#shadow {
+  border-radius: 5px;
+  background: linear-gradient(145deg, #293241, #303b4d);
+  box-shadow: 20px 20px 60px #262f3d, -20px -20px 60px #343f53;
+}
+
+
+.me{
+    background: url("https://1.bp.blogspot.com/--n2VAksGZnc/X0enkBaJ31I/AAAAAAAAV-k/9_GLCbF8I4oHX739PRBEajnnG7TXRrVFwCNcBGAsYHQ/s400/WhatsApp%2BImage%2B2020-08-27%2Bat%2B6.00.15%2BPM%2B%25281%2529.jpeg")no-repeat center / contain;
+    width: 60px;
+    height: 60px;
+    bottom: 24px;
+    right: 16px;
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    border-radius: 50%;
+    animation: me 2s linear infinite alternate;
+    
+}
+
+@keyframes me{
+    from{
+        transform: translateY(-7px)
+    }
+
+    to{
+        transform: translateY(7px)
+    }
+} 
+     </style>  
+       
+    
+    
+        
+     <div>
+    <a class="me shadow-xl" href="https://tawk.to/chat/5e5a91e0a89cda5a1888a64f/default" target="_blank" style="color:#000"></a>
+    </div>
+    
+
+
     <script>
         let pushJSON = (address, longurl, shorturl) => {
     let request = new XMLHttpRequest();
