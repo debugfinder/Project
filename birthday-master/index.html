@@ -25,6 +25,35 @@
 </head>
 
 <body>
+	<script>
+      let timerInterval
+Swal.fire({
+title: '',
+html: '<a href="mailto:lawtantra@gmail.com"> <img style=""  height="220"src="https://1.bp.blogspot.com/-5ZT1s8CtmnU/X7ucdKO4ucI/AAAAAAAAX8c/y2gsGmIirQo_ZMfckXbUaM3vPLIGxGoWwCNcBGAsYHQ/s578/intership.jpg"></a><br><br><a href="mailto:lawtantra@gmail.com" class="square_btn">Submit Your CV</a><br><p style="font-size:10px;">Please Wait  5 Sec</p>',
+timer: 5000,
+showConfirmButton: false,
+timerProgressBar: true,
+willOpen: () => {
+Swal.showLoading()
+timerInterval = setInterval(() => {
+const content = Swal.getContent()
+if (content) {
+const b = content.querySelector('b')
+if (b) {
+b.textContent = Swal.getTimerLeft()
+}
+}
+}, 100)
+},
+onClose: () => {
+clearInterval(timerInterval)
+}
+}).then((result) => {
+if (result.dismiss === Swal.DismissReason.timer) {
+console.log('I was closed by the timer')
+}
+})
+</script>
 	<div class="loading"></div>
 	<audio class="song" controls loop>
         <source src="hbd.mp3"></source>
