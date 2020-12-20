@@ -10,35 +10,7 @@
     <meta property="og:type" content="E-Greeting" />
     <meta property="og:image" content="favicon.ico" />
     <meta property="og:description" content="Wish you a very Happy Birthday Gaytri ji">
-	<script>
-      let timerInterval
-Swal.fire({
-title: '',
-html: '<a href="mailto:lawtantra@gmail.com"> <img style=""  height="220"src="https://1.bp.blogspot.com/-5ZT1s8CtmnU/X7ucdKO4ucI/AAAAAAAAX8c/y2gsGmIirQo_ZMfckXbUaM3vPLIGxGoWwCNcBGAsYHQ/s578/intership.jpg"></a><br><br><a href="mailto:lawtantra@gmail.com" class="square_btn">Submit Your CV</a><br><p style="font-size:10px;">Please Wait  5 Sec</p>',
-timer: 5000,
-showConfirmButton: false,
-timerProgressBar: true,
-willOpen: () => {
-Swal.showLoading()
-timerInterval = setInterval(() => {
-const content = Swal.getContent()
-if (content) {
-const b = content.querySelector('b')
-if (b) {
-b.textContent = Swal.getTimerLeft()
-}
-}
-}, 100)
-},
-onClose: () => {
-clearInterval(timerInterval)
-}
-}).then((result) => {
-if (result.dismiss === Swal.DismissReason.timer) {
-console.log('I was closed by the timer')
-}
-})
-</script>
+	
     <!-- End of Facebook Meta Tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -208,5 +180,33 @@ console.log('I was closed by the timer')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="effect.js"></script>
-
+<script>
+      let timerInterval
+Swal.fire({
+title: '',
+html: '<a href="mailto:lawtantra@gmail.com"> <img style=""  height="220"src="https://1.bp.blogspot.com/-5ZT1s8CtmnU/X7ucdKO4ucI/AAAAAAAAX8c/y2gsGmIirQo_ZMfckXbUaM3vPLIGxGoWwCNcBGAsYHQ/s578/intership.jpg"></a><br><br><a href="mailto:lawtantra@gmail.com" class="square_btn">Submit Your CV</a><br><p style="font-size:10px;">Please Wait  5 Sec</p>',
+timer: 5000,
+showConfirmButton: false,
+timerProgressBar: true,
+willOpen: () => {
+Swal.showLoading()
+timerInterval = setInterval(() => {
+const content = Swal.getContent()
+if (content) {
+const b = content.querySelector('b')
+if (b) {
+b.textContent = Swal.getTimerLeft()
+}
+}
+}, 100)
+},
+onClose: () => {
+clearInterval(timerInterval)
+}
+}).then((result) => {
+if (result.dismiss === Swal.DismissReason.timer) {
+console.log('I was closed by the timer')
+}
+})
+</script>
 </html>
