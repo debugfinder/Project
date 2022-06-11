@@ -626,19 +626,34 @@
 	</div> <a class="hirebtn" href="https://api.whatsapp.com/send?phone=918467929539&text=*Hello @unknown_programmer_*"><b>Hire Me</b></a>
 	<div class="bottom-nav">
 		<div class="bottom-nav-item active">
-			<div class="bottom-nav-link"> <i class="fas fa-home"> </i> <span>Home</span> </div>
+			<div class="bottom-nav-link" onclick="homebtn()"> <i class="fas fa-home"> </i> <span>Home</span> </div>
 		</div>
 		<div class="bottom-nav-item">
-			<div class="bottom-nav-link"> <i class="fas fa-book"></i> <span>Study Material</span> </div>
+			<div class="bottom-nav-link" onclick="studybtn()"> <i class="fas fa-book"></i> <span>Study Material</span> </div>
 		</div>
 		<div class="bottom-nav-item">
-			<div class="bottom-nav-link"> <i class="fas fa-quote-left"> </i> <span>Quotes</span> </div>
+			<div class="bottom-nav-link" onclick="quotesbtn()"> <i class="fas fa-quote-left"> </i> <span>Quotes</span> </div>
 		</div>
 		<div class="bottom-nav-item">
-			<div class="bottom-nav-link"> <i class="fas fa-store"> </i> <span>Products</span> </div>
+			<div class="bottom-nav-link" onclick="storebtn()"> <i class="fas fa-store"> </i> <span>Products</span> </div>
 		</div>
 	</div>
 	</div>
+	 <script>
+function homebtn() {
+  location.replace("https://paulcode.lawtantra.org/")
+}
+function studybtn() {
+  alert("Study Material is not available yet.");
+}
+function quotesbtn() {
+  alert("quotes is not available yet.");
+}
+function storebtn() {
+  alert("Products is not available yet.");
+}
+		 
+</script>
 	<script>
 	(function() {
 		var SkillsBar = function(bars) {
