@@ -7,896 +7,757 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<title>PRADEEP.P - Maker</title>
 	<link rel="icon" href="https://icons-for-free.com/iconfiles/png/512/auction+finance+gavel+hammer+justice+law+icon-1320086007250407801.png">
-  <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-	
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-
-
-
-
-
-
+	<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Oleo+Script&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Krona+One|Montserrat|Raleway&display=swap');
-
-.header-fixed {
-	background-color:#292c2f;
-	box-shadow:0 1px 1px #ccc;
-	padding: 20px 40px;
-	height: 80px;
-	color: #ffffff;
-	box-sizing: border-box;
-	top:-100px;
-
-	-webkit-transition:top 0.3s;
-	transition:top 0.3s;
-}
-
-.header-fixed .header-limiter {
-	max-width: 1200px;
-	text-align: center;
-	margin: 0 auto;
-}
-
-/*	The header placeholder. It is displayed when the header is fixed to the top of the
-	browser window, in order to prevent the content of the page from jumping up. */
-
-.header-fixed-placeholder{
-	height: 80px;
-	display: none;
-}
-
-/* Logo */
-
-.header-fixed .header-limiter h1 {
-	float: left;
-	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
-	line-height: 40px;
-	margin: 0;
-}
-
-.header-fixed .header-limiter h1 span {
-	color: #5383d3;
-}
-
-/* The navigation links */
-
-.header-fixed .header-limiter a {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-.header-fixed .header-limiter nav {
-	font:16px Arial, Helvetica, sans-serif;
-	line-height: 40px;
-	float: right;
-}
-
-.header-fixed .header-limiter nav a{
-	display: inline-block;
-	padding: 10px 10px;
-	text-decoration:none;
-	color: #ffffff;
-	opacity: 0.9;
-}
-
-.header-fixed .header-limiter nav a:hover{
-	opacity: 1;
-}
-
-.header-fixed .header-limiter nav a.selected {
-	color: #608bd2;
-	pointer-events: none;
-	opacity: 1;
-}
-
-/* Fixed version of the header */
-
-body.fixed .header-fixed {
-	padding: 10px 40px;
-	height: 60px;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-body.fixed .header-fixed-placeholder {
-	display: block;
-}
-
-body.fixed .header-fixed .header-limiter h1 {
-	font-size: 24px;
-	line-height: 35px;
-}
-
-body.fixed .header-fixed .header-limiter nav {
-	line-height:20px;
-	font-size: 15px;
-	
-
-}
-
-
-/* Making the header responsive */
-
-@media all and (max-width: 600px) {
-
+	@import url('https://fonts.googleapis.com/css?family=Krona+One|Montserrat|Raleway&display=swap');
 	.header-fixed {
-		padding: 20px 0;
-		height: 75px;
+		background-color: #292c2f;
+		box-shadow: 0 1px 1px #ccc;
+		padding: 20px 40px;
+		height: 80px;
+		color: #ffffff;
+		box-sizing: border-box;
+		top: -100px;
+		-webkit-transition: top 0.3s;
+		transition: top 0.3s;
 	}
-
-	.header-fixed .header-limiter h1 {
-		float: none;
-		margin: -8px 0 10px;
+	
+	.header-fixed .header-limiter {
+		max-width: 1200px;
 		text-align: center;
-		font-size: 24px;
-		line-height: 1;
+		margin: 0 auto;
 	}
-
-	.header-fixed .header-limiter nav {
-		line-height: 1;
-		float:none;
-	}
-
-	.header-fixed .header-limiter nav a {
-		font-size: 13px;
-
-	}
-
-	body.fixed .header-fixed {
+	/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+	
+	.header-fixed-placeholder {
+		height: 80px;
 		display: none;
 	}
-
-}
-
-/*
+	/* Logo */
+	
+	.header-fixed .header-limiter h1 {
+		float: left;
+		font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+		line-height: 40px;
+		margin: 0;
+	}
+	
+	.header-fixed .header-limiter h1 span {
+		color: #5383d3;
+	}
+	/* The navigation links */
+	
+	.header-fixed .header-limiter a {
+		color: #ffffff;
+		text-decoration: none;
+	}
+	
+	.header-fixed .header-limiter nav {
+		font: 16px Arial, Helvetica, sans-serif;
+		line-height: 40px;
+		float: right;
+	}
+	
+	.header-fixed .header-limiter nav a {
+		display: inline-block;
+		padding: 10px 10px;
+		text-decoration: none;
+		color: #ffffff;
+		opacity: 0.9;
+	}
+	
+	.header-fixed .header-limiter nav a:hover {
+		opacity: 1;
+	}
+	
+	.header-fixed .header-limiter nav a.selected {
+		color: #608bd2;
+		pointer-events: none;
+		opacity: 1;
+	}
+	/* Fixed version of the header */
+	
+	body.fixed .header-fixed {
+		padding: 10px 40px;
+		height: 60px;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	
+	body.fixed .header-fixed-placeholder {
+		display: block;
+	}
+	
+	body.fixed .header-fixed .header-limiter h1 {
+		font-size: 24px;
+		line-height: 35px;
+	}
+	
+	body.fixed .header-fixed .header-limiter nav {
+		line-height: 20px;
+		font-size: 15px;
+	}
+	/* Making the header responsive */
+	
+	@media all and (max-width: 600px) {
+		.header-fixed {
+			padding: 20px 0;
+			height: 75px;
+		}
+		.header-fixed .header-limiter h1 {
+			float: none;
+			margin: -8px 0 10px;
+			text-align: center;
+			font-size: 24px;
+			line-height: 1;
+		}
+		.header-fixed .header-limiter nav {
+			line-height: 1;
+			float: none;
+		}
+		.header-fixed .header-limiter nav a {
+			font-size: 13px;
+		}
+		body.fixed .header-fixed {
+			display: none;
+		}
+	}
+	/*
 	 We are clearing the body's margin and padding, so that the header fits properly.
 	 We are also adding a height to demonstrate the scrolling behavior. You can remove
 	 these styles.
  */
-
-
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #fff;
-    color: #222;
-  }
-}
-
-
-
-
-body {
-	font-family: 'Noto Serif', serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-	margin: 0;
-	padding: 0;
-	background-color: #fff;
-	color: #222;
-	font-size: 2rem;
-	line-height: 1.8;
-}
-		
-		
-		
-		
-a {
-	color: inherit;
-}
-
-a:hover {
-	color: #555;
-}
-
-a.coefficient:hover {
-	color: #0054e6;
-}
-
-a.twitter:hover {
-	color: #1ca2f3;
-}
-
-a.producthunt:hover {
-	color: #da542e;
-}
-
-a.github:hover {
-	color: #171515;
-}
-
-a.telegram:hover {
-	color: #199cdf;
-}
-
-a.linkedin:hover {
-	color: #0178b5;
-}
-a.jsonbox:hover {
-	color: #BE8549;
-}
-a.talk:hover {
-	color: #6669C4;
-}
-a.unapp:hover {
-	color: #333333;
-}
-a.looptap:hover {
-	color: #ED5566;
-}
-a.whistly:hover {
-	color: #3498db;
-}
-a.notedown:hover {
-	color: #9b59b6;
-}
-
-#content {
-	width: 100%;
-	max-width: 768px;
-	margin: 5rem auto 2rem;
-	position: relative;
-	padding: 2rem;
-	box-sizing: border-box;
-}
-
-#name {
-	font-family: 'Oleo Script', cursive;
-	font-size: 120%;
-}
-
-@media (prefers-color-scheme: dark) {
-	body {
-		background-color: #fff;
-		color: #ddd;
+	
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: #fff;
+			color: #222;
+		}
 	}
-
-}
-
-
-.fa {
-  padding: 50px;
-  font-size: 50px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-  border: 5px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-
-
-
-
-
-
-.bottom-nav {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0.8rem 0;
-  background-color: #252a32;
-  z-index: 99;
-  will-change: transform;
-  transform: translateZ(0);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
-}
-.bottom-nav-item {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #f1f5f8;
-}
-.bottom-nav-link {
-  display: flex;
-  flex-direction: column;
-}
-.bottom-nav .active {
-  color: #5383d3;
-}
-.fa{
-  font-size: 20px;
-}
-.fas{
-  font-size: 20px;
-}
-
-
-<!--profile Card -->
-
- 
-/*
+	
+	body {
+		font-family: 'Noto Serif', serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-text-size-adjust: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: #fff;
+		color: #222;
+		font-size: 2rem;
+		line-height: 1.8;
+	}
+	
+	a {
+		color: inherit;
+	}
+	
+	a:hover {
+		color: #555;
+	}
+	
+	a.coefficient:hover {
+		color: #0054e6;
+	}
+	
+	a.twitter:hover {
+		color: #1ca2f3;
+	}
+	
+	a.producthunt:hover {
+		color: #da542e;
+	}
+	
+	a.github:hover {
+		color: #171515;
+	}
+	
+	a.telegram:hover {
+		color: #199cdf;
+	}
+	
+	a.linkedin:hover {
+		color: #0178b5;
+	}
+	
+	a.jsonbox:hover {
+		color: #BE8549;
+	}
+	
+	a.talk:hover {
+		color: #6669C4;
+	}
+	
+	a.unapp:hover {
+		color: #333333;
+	}
+	
+	a.looptap:hover {
+		color: #ED5566;
+	}
+	
+	a.whistly:hover {
+		color: #3498db;
+	}
+	
+	a.notedown:hover {
+		color: #9b59b6;
+	}
+	
+	#content {
+		width: 100%;
+		max-width: 768px;
+		margin: 5rem auto 2rem;
+		position: relative;
+		padding: 2rem;
+		box-sizing: border-box;
+	}
+	
+	#name {
+		font-family: 'Oleo Script', cursive;
+		font-size: 120%;
+	}
+	
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: #fff;
+			color: #ddd;
+		}
+	}
+	
+	.fa {
+		padding: 50px;
+		font-size: 50px;
+		width: 20px;
+		text-align: center;
+		text-decoration: none;
+		margin: 5px 2px;
+		border-radius: 50%;
+		border: 5px;
+	}
+	
+	.fa:hover {
+		opacity: 0.7;
+	}
+	
+	.fa-facebook {
+		background: #3B5998;
+		color: white;
+	}
+	
+	.fa-twitter {
+		background: #55ACEE;
+		color: white;
+	}
+	
+	.fa-youtube {
+		background: #bb0000;
+		color: white;
+	}
+	
+	.fa-instagram {
+		background: #125688;
+		color: white;
+	}
+	
+	.bottom-nav {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0.8rem 0;
+		background-color: #252a32;
+		z-index: 99;
+		will-change: transform;
+		transform: translateZ(0);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+	}
+	
+	.bottom-nav-item {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: center;
+		text-align: center;
+		font-size: 0.8rem;
+		color: #f1f5f8;
+	}
+	
+	.bottom-nav-link {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.bottom-nav .active {
+		color: #5383d3;
+	}
+	
+	.fa {
+		font-size: 20px;
+	}
+	
+	.fas {
+		font-size: 20px;
+	}
+	
+	<!--profile Card -->
+	/*
     font-family: 'Montserrat';
     font-family: 'Krona One';
     font-family: 'Raleway', ;
 
 */
-
-
-
-
-.card{
-    width:92%;
-    height:100%;
-    margin:0;
-    padding:0;
-    background-color:black;
-    position:relative ;
-    left:50%;
-    transform:translate(-50%, -50%);
-    border-radius:10px;
-    top:40%;
-    border: 1px solid #fefcf6;
-   
-}
-.clip-top-1{
-    width:100%;
-    height:175px;
-    position:relative;
-    background:#5383d3;
-    clip-path: polygon(100% 0%, 100% 50%, 0% 100%, 0% 0%);
-    border-radius:10px 10px 0 0;
-    
-}
-.line{
-    position:relative ;
-    width:80px;
-    height:2px;
-    border-radius:10px;
-    background-color:#fff;
-    top:-25px;
-    left:10px;
-    transform:rotate(-15deg);
-    box-shadow:240px 0px #fff;
-}
-.user-img{
-    width:115px;
-    height:auto ;
-    border-radius:50%;
-    position:absolute ;
-    top:280px;
-    left:50%;
-    transform:translate(-50%, -50%);
-    border:4.5px solid White;
-    background-position:0px 0px;
-    transition:0.3s;
-     
-}
-
-
-
-.user-name{
-    position:absolute ;
-    font-size:20px;
-    color: black;
-    font-family: 'Montserrat' ;
-    top:380px;
-    font-weight:bolder ;
-    left:50%;
-    transform:translate(-50%, -50%);
-    text-shadow: 2px 2px 2px gray;
-}
-.user-profession{
-    position:absolute ;
-    font-size:13.5px;
-    font-family: 'Montserrat' ;
-    color:#5383d3;
-    top:415px;
-    left:50%;
-    transform:translate(-50%, -50%);
-}
-.user-description{
-    position:absolute ;
-    margin-top: 30px ;
-    color: black;
-    font-size:11px;
-    font-family: 'Montserrat' ;
-    top:480px;
-    line-height:20px;
-    left:50%;
-    word-spacing:3px;
-    text-align:center ;
-    width:80%;
-    transform:translate(-50%, -50%);
-}
-.hirebtn{
-    position:fixed ;
-    font-size:20px;
-    font-family: 'Montserrat' ;
-    bottom: 60px;
-    padding: 5px;
-    background-color:#5383d3;
-    left:50%;
-    align-items:center ;
-    word-spacing:3px;
-    text-align:center ;
-    border-radius: 25px;
-    color:#fff;
-    text-decoration:none ;
-    width:70%;
-    transition:0.2s;
-    transform:translate(-50%, -50%);
-    box-shadow: 2px 2px lightblue;
-}
-
-
-
-
-.profile{
-	padding: 60px 50px 50px 50px;
-	height: 985px;
-
-}
-
-/* My Skills */
-.skillbar-wrapper {
-	margin: 3.5em auto;
-	max-width: 960px;
-	height: 100%;
-}
-
-.space{
-	width: 100%;
-	height: 25px;
-	margin-top: 20px;
-	position:relative;
-}
-
-.skillbar {
-	position:relative;
-	margin-bottom: 15px;
-	width: 100%;
-	background: #eee;
-	height: 100%;
-	border-radius: 3px;
-	top: 200px;
-
-}
-
-.skillbar-title {
-	position:absolute;
-	top:0;
-	left:0;
-	width:110px;
-	font-weight: bold;
-	font-size: 13px;
-	color: #fff;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-	margin: 0;
-}
-
-.skillbar-title span {
-	display: block;
-	background: rgba(0, 0, 0, 0.1);
-	padding: 0 20px;
-	height:35px;
-	line-height: 35px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
-}
-
-.skillbar-bar {
-	height: 35px;
-	width: 0%;
-	border-radius: 3px;
-	transition: 500ms linear;
-	transition-property: width, background-color;
-}
-
-.skill-bar-percent {
-	position: absolute;
-	right: 10px;
-	top: 0;
-	font-size: 11px;
-	height: 35px;
-	line-height: 35px;
-	color: rgba( 0, 0, 0, 0.4 );
-	transition: color 500ms ease-out;
-}
-
-.complete .skill-bar-percent {
-	color: #fff;
-	text-shadow: 1px 1px 2px black;
-        font-weight: bold;
-}
-
-
-
-.html5 .skillbar-title {
-	background: #d35400;	
-}
-
-.html5 .skillbar-bar {
-	background: #e67e22;	
-}
-
-
-.css .skillbar-title {
-	background: #2980b9;	
-}
-
-.css .skillbar-bar {
-	background: #3498db;	
-}
-
-.javascript .skillbar-title {
-	background: #fac552;
-}
-.javascript .skillbar-bar {
-	background: #f1ac18;
-}
-
-.jquery .skillbar-title {
-	background: #2c3e50;	
-}
-
-.jquery .skillbar-bar {
-	background: #2c3e50;	
-}
-
-.php .skillbar-title {
-	background: #46465e;	
-}
-
-.php .skillbar-bar {
-	background: #5a68a5;	
-}
-
-.wordpress .skillbar-title {
-	background: #333333;	
-}
-
-.wordpress .skillbar-bar {
-	background: #525252;	
-}
-
-.server .skillbar-title {
-	background: #5e2750;	
-}
-
-.server .skillbar-bar {
-	background: #d43227;	
-}
-
-
-
-
+	
+	.card {
+		width: 92%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: black;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 10px;
+		top: 40%;
+		border: 1px solid #fefcf6;
+	}
+	
+	.clip-top-1 {
+		width: 100%;
+		height: 175px;
+		position: relative;
+		background: #5383d3;
+		clip-path: polygon(100% 0%, 100% 50%, 0% 100%, 0% 0%);
+		border-radius: 10px 10px 0 0;
+	}
+	
+	.line {
+		position: relative;
+		width: 80px;
+		height: 2px;
+		border-radius: 10px;
+		background-color: #fff;
+		top: -25px;
+		left: 10px;
+		transform: rotate(-15deg);
+		box-shadow: 240px 0px #fff;
+	}
+	
+	.user-img {
+		width: 115px;
+		height: auto;
+		border-radius: 50%;
+		position: absolute;
+		top: 280px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 4.5px solid White;
+		background-position: 0px 0px;
+		transition: 0.3s;
+	}
+	
+	.user-name {
+		position: absolute;
+		font-size: 20px;
+		color: black;
+		font-family: 'Montserrat';
+		top: 380px;
+		font-weight: bolder;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.user-profession {
+		position: absolute;
+		font-size: 13.5px;
+		font-family: 'Montserrat';
+		color: #5383d3;
+		top: 415px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.user-description {
+		position: absolute;
+		margin-top: 30px;
+		color: black;
+		font-size: 11px;
+		font-family: 'Montserrat';
+		top: 480px;
+		line-height: 20px;
+		left: 50%;
+		word-spacing: 3px;
+		text-align: center;
+		width: 80%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.hirebtn {
+		position: fixed;
+		font-size: 20px;
+		font-family: 'Montserrat';
+		bottom: 60px;
+		padding: 5px;
+		background-color: #5383d3;
+		left: 50%;
+		align-items: center;
+		word-spacing: 3px;
+		text-align: center;
+		border-radius: 25px;
+		color: #fff;
+		text-decoration: none;
+		width: 70%;
+		transition: 0.2s;
+		transform: translate(-50%, -50%);
+		box-shadow: 2px 2px lightblue;
+	}
+	
+	.profile {
+		padding: 60px 50px 50px 50px;
+		height: 985px;
+	}
+	/* My Skills */
+	
+	.skillbar-wrapper {
+		margin: 3.5em auto;
+		max-width: 960px;
+		height: 100%;
+	}
+	
+	.space {
+		width: 100%;
+		height: 25px;
+		margin-top: 20px;
+		position: relative;
+	}
+	
+	.skillbar {
+		position: relative;
+		margin-bottom: 15px;
+		width: 100%;
+		background: #eee;
+		height: 100%;
+		border-radius: 3px;
+		top: 200px;
+	}
+	
+	.skillbar-title {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 110px;
+		font-weight: bold;
+		font-size: 13px;
+		color: #fff;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		margin: 0;
+	}
+	
+	.skillbar-title span {
+		display: block;
+		background: rgba(0, 0, 0, 0.1);
+		padding: 0 20px;
+		height: 35px;
+		line-height: 35px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+	
+	.skillbar-bar {
+		height: 35px;
+		width: 0%;
+		border-radius: 3px;
+		transition: 500ms linear;
+		transition-property: width, background-color;
+	}
+	
+	.skill-bar-percent {
+		position: absolute;
+		right: 10px;
+		top: 0;
+		font-size: 11px;
+		height: 35px;
+		line-height: 35px;
+		color: rgba( 0, 0, 0, 0.4);
+		transition: color 500ms ease-out;
+	}
+	
+	.complete .skill-bar-percent {
+		color: #fff;
+		text-shadow: 1px 1px 2px black;
+		font-weight: bold;
+	}
+	
+	.html5 .skillbar-title {
+		background: #d35400;
+	}
+	
+	.html5 .skillbar-bar {
+		background: #e67e22;
+	}
+	
+	.css .skillbar-title {
+		background: #2980b9;
+	}
+	
+	.css .skillbar-bar {
+		background: #3498db;
+	}
+	
+	.javascript .skillbar-title {
+		background: #fac552;
+	}
+	
+	.javascript .skillbar-bar {
+		background: #f1ac18;
+	}
+	
+	.jquery .skillbar-title {
+		background: #2c3e50;
+	}
+	
+	.jquery .skillbar-bar {
+		background: #2c3e50;
+	}
+	
+	.php .skillbar-title {
+		background: #46465e;
+	}
+	
+	.php .skillbar-bar {
+		background: #5a68a5;
+	}
+	
+	.wordpress .skillbar-title {
+		background: #333333;
+	}
+	
+	.wordpress .skillbar-bar {
+		background: #525252;
+	}
+	
+	.server .skillbar-title {
+		background: #5e2750;
+	}
+	
+	.server .skillbar-bar {
+		background: #d43227;
+	}
 	</style>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-</head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> </head>
 
-<body  bgcolor="white">
-<header class="header-fixed">
-
-	<div class="header-limiter">
-
-		<h1><a href="#">Unknown<span>Programmer</span></a></h1>
-
-		<nav class="nav">
-			<a href="#" class="fa fa-youtube"></a>
-      <a href="#" class="fa fa-instagram"></a>
-			<a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>			
-		</nav>
-
+<body bgcolor="white">
+	<header class="header-fixed">
+		<div class="header-limiter">
+			<h1><a href="#">Unknown<span>Programmer</span></a></h1>
+			<nav class="nav">
+				<a href="https://youtube.com/channel/UClE522fpSIEEFQBKyuRk71Q" class="fa fa-youtube"></a>
+				<a href="https://www.instagram.com/unknown_programmer_/" class="fa fa-instagram"></a>
+				<a href="https://www.facebook.com/unknownprogrammerr" class="fa fa-facebook"></a>
+				<a href="https://twitter.com/unknowncoderr/" class="fa fa-twitter"></a>
+			</nav>
+		</div>
+	</header>
+	<!-- You need this element to prevent the content of the page from jumping up -->
+	<div class="header-fixed-placeholder"></div>
+	<!-- The content of your page would go here. -->
+	<div class="profile">
+		<div class="card">
+			<div class="clip-top-1"></div>
+			<div class="line"></div> <img class="user-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8IOhJUHEplyxTgiTeC2uGDKIN3KtV5P1lLW0AyXiUW0tmDEAnGkj9QQb5adONPvm9IBMwCeZwfLPUWz4dXJvLX3fsSRjOLIH7d08Z8VyWN9W6FgNLN3eAv2d0YQZLvfiJsf9BZnGL1iIZ_X26lWykY-_uXkD50hnAiodu8XubMG0fOKYjrzvQJSnt/s1600/Picsart_22-04-18_10-39-40-831.png" alt="IMG-20200224-015514" border="0">
+			<div class="user-name">PRADEEP PAL</div>
+			<div class="user-profession">@unknown_programmer_</div>
+			<div class="user-description"> I'm a Full Stack Web Developer &amp; Designer based in India, I'm very passionate and dedicated towards my work. I have completed many projects using different technologies and i have acquired the skills necessary to build great and premium web-apps or websites.</div>
+			<div class="skillbar-wrapper">
+				<div class="skillbar clearfix html5" data-percent="100%">
+					<h4 class="skillbar-title"><span>HTML5</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">100%</div>
+				</div>
+				<div class="skillbar clearfix css" data-percent="100%">
+					<h4 class="skillbar-title"><span>CSS</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">100%</div>
+				</div>
+				<div class="skillbar clearfix javascript" data-percent="85%">
+					<h4 class="skillbar-title"><span>JavaScript</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">85%</div>
+				</div>
+				<div class="skillbar clearfix jquery" data-percent="80%">
+					<h4 class="skillbar-title"><span>jQuery</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">80%</div>
+				</div>
+				<div class="skillbar clearfix php" data-percent="75%">
+					<h4 class="skillbar-title"><span>PHP</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">75%</div>
+				</div>
+				<div class="skillbar clearfix wordpress" data-percent="95%">
+					<h4 class="skillbar-title"><span>WordPress</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">95%</div>
+				</div>
+				<div class="skillbar clearfix server" data-percent="70%">
+					<h4 class="skillbar-title"><span>Server</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">70%</div>
+				</div>
+				<div class="skillbar clearfix html5" data-percent="85%">
+					<h4 class="skillbar-title"><span>mysql</span></h4>
+					<div class="skillbar-bar"></div>
+					<div class="skill-bar-percent">85%</div>
+				</div>
+			</div>
+			<div class="space"></div>
+		</div>
+	</div> <a class="hirebtn" href="#"><b>Hire Me</b></a>
+	<div class="bottom-nav">
+		<div class="bottom-nav-item active">
+			<div class="bottom-nav-link"> <i class="fas fa-home"> </i> <span>Home</span> </div>
+		</div>
+		<div class="bottom-nav-item">
+			<div class="bottom-nav-link"> <i class="fas fa-book"></i> <span>Study Material</span> </div>
+		</div>
+		<div class="bottom-nav-item">
+			<div class="bottom-nav-link"> <i class="fas fa-quote-left"> </i> <span>Quotes</span> </div>
+		</div>
+		<div class="bottom-nav-item">
+			<div class="bottom-nav-link"> <i class="fas fa-store"> </i> <span>Products</span> </div>
+		</div>
 	</div>
-
-
-
-</header>
-
-
-
-
-<!-- You need this element to prevent the content of the page from jumping up -->
-<div class="header-fixed-placeholder"></div>
-
-<!-- The content of your page would go here. -->
-
-    <div class="profile">
-      <div class="card">
-            <div class="clip-top-1"></div>
-            <div class="line"></div>
-            <img class="user-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8IOhJUHEplyxTgiTeC2uGDKIN3KtV5P1lLW0AyXiUW0tmDEAnGkj9QQb5adONPvm9IBMwCeZwfLPUWz4dXJvLX3fsSRjOLIH7d08Z8VyWN9W6FgNLN3eAv2d0YQZLvfiJsf9BZnGL1iIZ_X26lWykY-_uXkD50hnAiodu8XubMG0fOKYjrzvQJSnt/s1600/Picsart_22-04-18_10-39-40-831.png" alt="IMG-20200224-015514" border="0">
-            <div class="user-name">PRADEEP PAL</div>
-            <div class="user-profession">@unknown_programmer_</div>
-            <div class="user-description"> I'm a Full Stack Web Developer &amp; Designer based in India, I'm very passionate and dedicated towards my work. I have completed many projects using different technologies and i have acquired the skills necessary to build great and premium web-apps or websites.</div>
-     <div class="skillbar-wrapper">
-<div class="skillbar clearfix html5" data-percent="100%">
-	<h4 class="skillbar-title"><span>HTML5</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">100%</div>
-</div>
-
-<div class="skillbar clearfix css" data-percent="100%">
-	<h4 class="skillbar-title"><span>CSS</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">100%</div>
-</div>
-
-<div class="skillbar clearfix javascript" data-percent="85%">
-	<h4 class="skillbar-title"><span>JavaScript</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">85%</div>
-</div>
-
-<div class="skillbar clearfix jquery" data-percent="80%">
-	<h4 class="skillbar-title"><span>jQuery</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">80%</div>
-</div>
-
-<div class="skillbar clearfix php" data-percent="75%">
-	<h4 class="skillbar-title"><span>PHP</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">75%</div>
-</div>
-
-<div class="skillbar clearfix wordpress" data-percent="95%">
-	<h4 class="skillbar-title"><span>WordPress</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">95%</div>
-</div>
-
-<div class="skillbar clearfix server" data-percent="70%">
-	<h4 class="skillbar-title"><span>Server</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">70%</div>
-</div>
-<div class="skillbar clearfix html5" data-percent="85%">
-	<h4 class="skillbar-title"><span>mysql</span></h4>
-	<div class="skillbar-bar"></div>
-	<div class="skill-bar-percent">85%</div>
-</div>
-</div>
-<div class="space"></div>
-      </div>
-    </div>
-
-    
-<a class="hirebtn" href="#"><b>Hire Me</b></a>
-
-<div class="bottom-nav">
-      <div class="bottom-nav-item active">
-        <div class="bottom-nav-link">
-          <i class="fas fa-home"> </i>
-          <span>Home</span>
-        </div>
-      </div>
-      <div class="bottom-nav-item">
-        <div class="bottom-nav-link">
-          <i class="fas fa-book"></i>
-          <span>Study Material</span>
-        </div>
-      </div>
-      <div class="bottom-nav-item">
-        <div class="bottom-nav-link">
-          <i class="fas fa-quote-left"> </i>
-          <span>Quotes</span>
-        </div>
-      </div>
-      
-      <div class="bottom-nav-item">
-        <div class="bottom-nav-link">
-          <i class="fas fa-store"> </i>
-          <span>Products</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-        
-        <script>
-
-          (function() {
-	
-	var SkillsBar = function( bars ) {
-		this.bars = document.querySelectorAll( bars );
-		if( this.bars.length > 0 ) {
-			this.init();
-		}	
-	};
-	
-	SkillsBar.prototype = {
-		init: function() {
-			var self = this;
-			self.index = -1;
-			self.timer = setTimeout(function() {
-				self.action();
-			}, 500);
-			
-			
-		},
-		select: function( n ) {
-			var self = this,
-				bar = self.bars[n];
-				
-				if( bar ) {
-					var width = bar.parentNode.dataset.percent;
-				
-					bar.style.width = width;
-					bar.parentNode.classList.add( "complete" );	
-				}
-		},
-		action: function() {
-			var self = this;
-			self.index++;
-			if( self.index == self.bars.length ) {
-				clearTimeout( self.timer );
-			} else {
-				self.select( self.index );	
+	</div>
+	<script>
+	(function() {
+		var SkillsBar = function(bars) {
+			this.bars = document.querySelectorAll(bars);
+			if(this.bars.length > 0) {
+				this.init();
 			}
-			
-			setTimeout(function() {
-				self.action();
-			},500);
-		}
-	};
-	
-	window.SkillsBar = SkillsBar;
-	
-})();
-
-(function() {
-	document.addEventListener( "DOMContentLoaded", function() {
-		var skills = new SkillsBar( ".skillbar-bar" );
+		};
+		SkillsBar.prototype = {
+			init: function() {
+				var self = this;
+				self.index = -1;
+				self.timer = setTimeout(function() {
+					self.action();
+				}, 500);
+			},
+			select: function(n) {
+				var self = this,
+					bar = self.bars[n];
+				if(bar) {
+					var width = bar.parentNode.dataset.percent;
+					bar.style.width = width;
+					bar.parentNode.classList.add("complete");
+				}
+			},
+			action: function() {
+				var self = this;
+				self.index++;
+				if(self.index == self.bars.length) {
+					clearTimeout(self.timer);
+				} else {
+					self.select(self.index);
+				}
+				setTimeout(function() {
+					self.action();
+				}, 500);
+			}
+		};
+		window.SkillsBar = SkillsBar;
+	})();
+	(function() {
+		document.addEventListener("DOMContentLoaded", function() {
+			var skills = new SkillsBar(".skillbar-bar");
+		});
+	})();
+	ScrollReveal().reveal('.card', {
+		delay: 1000
 	});
-})();
-
-
-
-
-            ScrollReveal().reveal('.card', {delay: 1000});
-
-
-            $(document).ready(function(){
-  $(".yellow").click(function(){
-  $(".clip-top-1").css("background","#F3B431");
-  $(".clip-top-1").css("transition","0.6s")
-  $(".btn").css("background","#F3B431");
-  $(".btn").css("transition","0.6s")
-  $(".clip-bottom").css("background","#F3B431");
-  });
-  
-  $(".green").click(function(){
-  $(".clip-top-1").css("background","#218F76");
-  $(".clip-top-1").css("transition","0.6s")
-  $(".btn").css("background","#218F76");
-  $(".btn").css("transition","0.6s")
-  $(".clip-bottom").css("background","#218F76");
-  });
-  
-  $(".dark").click(function(){
-  $(".clip-top-1").css("background","#34495e");
-  $(".clip-top-1").css("transition","0.6s")
-  $(".btn").css("background","#34495e");
-  $(".btn").css("transition","0.6s")
-  $(".clip-bottom").css("background","#34495e");
-  });
-  
-  $(".red").click(function(){
-  $(".clip-top-1").css("background","#E8290B");
-  $(".clip-top-1").css("transition","0.6s")
-  $(".btn").css("background","#E8290B");
-  $(".btn").css("transition","0.6s")
-  $(".clip-bottom").css("background","#E8290B");
-  });
-});
-
-      
-        </script>
-
-
-  <script type="text/javascript">
-    var navItems = document.querySelectorAll(".bottom-nav-item");
-
-navItems.forEach(function(e, i) {
-  e.addEventListener("click", function(e) {
-    navItems.forEach(function(e2, i2) {
-      e2.classList.remove("active");
-    });
-    this.classList.add("active");
-  });
-});
-  </script>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-
-	$(document).ready(function(){
-
+	$(document).ready(function() {
+		$(".yellow").click(function() {
+			$(".clip-top-1").css("background", "#F3B431");
+			$(".clip-top-1").css("transition", "0.6s")
+			$(".btn").css("background", "#F3B431");
+			$(".btn").css("transition", "0.6s")
+			$(".clip-bottom").css("background", "#F3B431");
+		});
+		$(".green").click(function() {
+			$(".clip-top-1").css("background", "#218F76");
+			$(".clip-top-1").css("transition", "0.6s")
+			$(".btn").css("background", "#218F76");
+			$(".btn").css("transition", "0.6s")
+			$(".clip-bottom").css("background", "#218F76");
+		});
+		$(".dark").click(function() {
+			$(".clip-top-1").css("background", "#34495e");
+			$(".clip-top-1").css("transition", "0.6s")
+			$(".btn").css("background", "#34495e");
+			$(".btn").css("transition", "0.6s")
+			$(".clip-bottom").css("background", "#34495e");
+		});
+		$(".red").click(function() {
+			$(".clip-top-1").css("background", "#E8290B");
+			$(".clip-top-1").css("transition", "0.6s")
+			$(".btn").css("background", "#E8290B");
+			$(".btn").css("transition", "0.6s")
+			$(".clip-bottom").css("background", "#E8290B");
+		});
+	});
+	</script>
+	<script type="text/javascript">
+	var navItems = document.querySelectorAll(".bottom-nav-item");
+	navItems.forEach(function(e, i) {
+		e.addEventListener("click", function(e) {
+			navItems.forEach(function(e2, i2) {
+				e2.classList.remove("active");
+			});
+			this.classList.add("active");
+		});
+	});
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
 		var showHeaderAt = 150;
-
 		var win = $(window),
-				body = $('body');
-
+			body = $('body');
 		// Show the fixed header only on larger screen devices
-
-		if(win.width() > 400){
-
+		if(win.width() > 400) {
 			// When we scroll more than 150px down, we set the
 			// "fixed" class on the body element.
-
-			win.on('scroll', function(e){
-
+			win.on('scroll', function(e) {
 				if(win.scrollTop() > showHeaderAt) {
 					body.addClass('fixed');
-				}
-				else {
+				} else {
 					body.removeClass('fixed');
 				}
 			});
-
 		}
-
 	});
-
 	var navItems = document.querySelectorAll(".bottom-nav-item");
-
-navItems.forEach(function(e, i) {
-  e.addEventListener("click", function(e) {
-    navItems.forEach(function(e2, i2) {
-      e2.classList.remove("active");
-    });
-    this.classList.add("active");
-  });
-});
-
-
-
-
-</script>
-
-
-
-
+	navItems.forEach(function(e, i) {
+		e.addEventListener("click", function(e) {
+			navItems.forEach(function(e2, i2) {
+				e2.classList.remove("active");
+			});
+			this.classList.add("active");
+		});
+	});
+	</script>
 	<!--
 
 	<div id="content">
