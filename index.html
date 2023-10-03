@@ -2,6 +2,49 @@
 <html lang="en">
 
 <head>
+	<script>
+      /*
+      // Redirect function
+      function redirect() {
+        // Redirect URL
+        const redirectUrl = 'http://www.youtube.com/@pradeepedu';
+
+        // Check if the user is on an Android device
+        const isAndroid = /Android/i.test(navigator.userAgent);
+
+        // Open in YouTube app if on Android, otherwise open in browser
+        if (isAndroid) {
+          const intentUrl = "intent://www.youtube.com/@pradeepedu#Intent;package=com.google.android.youtube;scheme=https;end";
+          window.location.href = intentUrl;
+        } else {
+          window.location.href = redirectUrl;
+        }
+      }
+
+      // Call the redirect function when the page loads
+      window.onload = redirect;
+      
+      **/
+      
+    function redirectToYouTubeApp() {
+  const isAndroid = /Android/i.test(navigator.userAgent);
+
+  if (isAndroid) {
+    const youtubeAppUrl = 'intent://www.youtube.com/@pradeepedu#Intent;package=com.google.android.youtube;scheme=https;end;';
+    const fallbackUrl = 'https://www.youtube.com/@pradeepedu';
+    
+    window.location.href = youtubeAppUrl;
+    
+    setTimeout(function() {
+      window.location.href = fallbackUrl;
+    }, 500);
+  } else {
+    window.open('https://www.youtube.com/@pradeepedu');
+  }
+}
+
+
+    </script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Cache-control" content="public" />
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
