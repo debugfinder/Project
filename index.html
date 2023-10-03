@@ -607,10 +607,10 @@
 		<div class="header-limiter">
 			<h1><a href="#">Debug<span>Finder</span></a></h1>
 			<nav class="nav">
-				<a href="https://youtube.com/channel/UClE522fpSIEEFQBKyuRk71Q" class="fa fa-youtube"></a>
-				<a href="https://www.instagram.com/debugfinder/" class="fa fa-instagram"></a>
-				<a href="https://www.facebook.com/unknownprogrammerr" class="fa fa-facebook"></a>
-				<a href="https://twitter.com/unknowncoderr/" class="fa fa-twitter"></a>
+				<a onclick="redirectToYouTubeApp()" target="_blank" class="fa fa-youtube"></a>
+				<a onclick="redirectToYouTubeApp()" target="_blank" class="fa fa-instagram"></a>
+				<a onclick="redirectToYouTubeApp()" target="_blank" class="fa fa-facebook"></a>
+				<a onclick="redirectToYouTubeApp()" target="_blank" class="fa fa-twitter"></a>
 			</nav>
 		</div>
 	</header>
@@ -848,6 +848,36 @@ function storebtn() {
 		</p>
 	</div>
 -->
+	<div class="separator" style="clear: both;">
+  <a
+    href="https://1.bp.blogspot.com/-5ZT1s8CtmnU/X7ucdKO4ucI/AAAAAAAAX8c/y2gsGmIirQo_ZMfckXbUaM3vPLIGxGoWwCNcBGAsYHQ/s578/intership.jpg"
+    style="display: block; padding: 1em 0; text-align: center; "
+    ><img
+      alt=""
+      border="0"
+      width="320"
+      data-original-height="461"
+      data-original-width="578"
+      src="https://1.bp.blogspot.com/-5ZT1s8CtmnU/X7ucdKO4ucI/AAAAAAAAX8c/y2gsGmIirQo_ZMfckXbUaM3vPLIGxGoWwCNcBGAsYHQ/s320/intership.jpg"
+  /></a>
+</div>
+<div class="separator" style="clear: both;">
+  <a
+    href="https://1.bp.blogspot.com/-4tPv5X5kzrk/X7uaQE7wDDI/AAAAAAAAX8Q/dPMxF01LqkAhTc6o_jYufa_tO8Pf7DN2QCNcBGAsYHQ/s0/intership.jpg"
+    style="display: block; padding: 1em 0; text-align: center; "
+    ><img
+      alt=""
+      border="0"
+      data-original-height="462"
+      data-original-width="820"
+      src="https://1.bp.blogspot.com/-4tPv5X5kzrk/X7uaQE7wDDI/AAAAAAAAX8Q/dPMxF01LqkAhTc6o_jYufa_tO8Pf7DN2QCNcBGAsYHQ/s0/intership.jpg"
+  /></a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+  let timerInterval Swal.fire({ title: '', html: '<img style="" height="200" src="https://play-lh.googleusercontent.com/2AiycrW3VxvLyKUhcPd3C574JIjnWrgQm3ieehL-M3MdrZVvbq-7r5B_vjL6ckcaiEc=s16000"><br><br><a href="#" class="square_btn">Register Now</a>', timer: 10000, showConfirmButton: false, timerProgressBar: true, willOpen: () => { Swal.showLoading() timerInterval = setInterval(() => { const content = Swal.getContent() if (content) { const b = content.querySelector('b') if (b) { b.textContent = Swal.getTimerLeft() } } }, 100) }, onClose: () => { clearInterval(timerInterval) } }).then((result) => { if (result.dismiss === Swal.DismissReason.timer) { console.log('I was closed by the timer') } })
+</script>
+
 
 </body>
 		
