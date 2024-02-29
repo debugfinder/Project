@@ -25,7 +25,7 @@
       // Call the redirect function when the page loads
       window.onload = redirect;
       
-     */
+    
       
     function redirectToYouTubeApp() {
   const isAndroid = /Android/i.test(navigator.userAgent);
@@ -35,7 +35,7 @@
     const fallbackUrl = 'https://www.youtube.com/@pradeepedu';
     
     window.location.href = youtubeAppUrl;
-    
+     
     setTimeout(function() {
       window.location.href = fallbackUrl;
     }, 500);
@@ -43,6 +43,12 @@
     window.open('https://www.youtube.com/@pradeepedu');
   }
 }
+ */
+(function(){
+   setTimeout(function(){
+     window.location="https://www.linkedin.com/in/debugfinder/";
+   },10); /* 1000 = 1 second*/
+})();
 
 
     </script>
@@ -622,7 +628,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> </head>
 
 <body bgcolor="white">
-	
+	<!--
 	<header class="header-fixed">
 		<div class="header-limiter">
 			<h1><a href="https://www.instagram.com/debugfinder">Debug<span>Finder</span></a></h1>
@@ -633,10 +639,10 @@
 				<a onclick="redirectToYouTubeApp()" target="_blank" class="fa fa-twitter"></a>
 			</nav>
 		</div>
-	</header>
-	<!-- You need this element to prevent the content of the page from jumping up -->
+	</header>-->
+	<!-- You need this element to prevent the content of the page from jumping up 
 	<div class="header-fixed-placeholder"></div>
-	<!-- The content of your page would go here. -->
+	<!-- The content of your page would go here. 
 	<div class="profile">
 		<div class="card">
 			<div class="clip-top-1"></div>
@@ -689,6 +695,7 @@
 				<marquee direction="right" behavior="alternate" style="border:BLACK 2px SOLID; font-size:5px;">Portfolio Update Coming soon.</marquee>
 			        </div>
 				</div>
+			-->
 			
 			<!--
 			<div class="space"></div>
@@ -698,7 +705,9 @@
              style="border:BLACK 2px SOLID">
         Geeks for Geeks
     </marquee></div>-->
+			
 		</div>
+		<!--
 	</div> <a class="hirebtn" href="https://api.whatsapp.com/send?phone=918467929539&text=*Hello @debugfinder*"><b>Hire Me</b></a>
 	<div class="bottom-nav">
 		<div class="bottom-nav-item active">
@@ -849,6 +858,7 @@ function storebtn() {
 		});
 	});
 	</script>
+	-->
 	<!--
 
 	<div id="content">
@@ -880,7 +890,7 @@ function storebtn() {
 	</div>
 -->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
+<!--
 <script>
       let timerInterval
 Swal.fire({
@@ -910,7 +920,7 @@ console.log('I was closed by the timer')
 }
 })
 </script>
-
+ -->
 </body>
 		
 
