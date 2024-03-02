@@ -19,11 +19,46 @@
     <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="css/style-switcher.css">
-
+    <style>
+          
+#shadow {
+    border-radius: 5px;
+    background: linear-gradient(145deg, #293241, #303b4d);
+    box-shadow: 20px 20px 60px #262f3d, -20px -20px 60px #343f53;
+  }
+  
+  .me{
+      background: url("https://1.bp.blogspot.com/--n2VAksGZnc/X0enkBaJ31I/AAAAAAAAV-k/9_GLCbF8I4oHX739PRBEajnnG7TXRrVFwCNcBGAsYHQ/s400/WhatsApp%2BImage%2B2020-08-27%2Bat%2B6.00.15%2BPM%2B%25281%2529.jpeg")no-repeat center / contain;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      left: 16px;
+      display: block;
+      position: fixed;
+      z-index: 9999;
+      border-radius: 50%;
+      animation: me 2s linear infinite alternate;
+      
+  }
+  
+  @keyframes me{
+      from{
+          transform: translateY(-7px)
+      }
+  
+      to{
+          transform: translateY(7px)
+      }
+  } 
+    
+    </style>
 
 </head>
 
 <body>
+    <div>
+    <a class="me shadow-xl" href="https://wa.me/8467929539?text=Hey%20there!%20I'm%20excited%20to%20hire%20you%20for%20a%20unique%20Website%20Development.%20Can%20we%20discuss%20the%20details%3F" style="color: black;" target="_blank"></a>
+    </div>
     <!-- ==== MAIN CONTAINER START ==== -->
     <div class="main-container">
         <!-- ==== ASIDE START===== -->
